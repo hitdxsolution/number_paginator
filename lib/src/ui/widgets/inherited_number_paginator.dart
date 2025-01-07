@@ -22,6 +22,7 @@ class InheritedNumberPaginator extends InheritedWidget {
     required this.numberPages,
     this.initialPage = 0,
     this.onPageChange,
+    
     required this.config,
     required super.child,
   });

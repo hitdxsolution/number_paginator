@@ -65,11 +65,22 @@ class NumberContent extends StatelessWidget {
 
   /// Builds a button for the given index.
   Widget _buildPageButton(BuildContext context, int index) => PaginatorButton(
+
+
+        
         onPressed: () =>
             InheritedNumberPaginator.of(context).onPageChange?.call(index),
         selected: _selected(index),
-        child:
-            AutoSizeText((index + 1).toString(), maxLines: 1, minFontSize: 5),
+        child: AutoSizeText((index + 1).toString(),
+            style: TextStyle(
+              fontWeight:
+                  InheritedNumberPaginator.of(context).config.buttonSelectedBold &&
+                          _selected(index)
+                      ? FontWeight.bold
+                      : FontWeight.normal,
+            ),
+            maxLines: 1,
+            minFontSize: 5),
       );
 
   Widget _buildDots(BuildContext context) => AspectRatio(

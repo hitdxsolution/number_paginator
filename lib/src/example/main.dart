@@ -1,13 +1,13 @@
-import 'package:example/builder_page.dart';
-import 'package:example/dropdown_page.dart';
-import 'package:example/numbers_page.dart';
-import 'package:example/only_arrows_page.dart';
 import 'package:flutter/material.dart';
+import 'package:number_paginator/src/example/builder_page.dart';
+import 'package:number_paginator/src/example/dropdown_page.dart';
+import 'package:number_paginator/src/example/numbers_page.dart';
+import 'package:number_paginator/src/example/only_arrows_page.dart';
 
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {

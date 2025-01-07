@@ -54,6 +54,8 @@ class NumberPaginatorUIConfig {
   /// The [Padding] that should be used for the [PaginatorButton]'s content.
   final EdgeInsetsGeometry? buttonPadding;
 
+  final bool buttonSelectedBold;
+
   const NumberPaginatorUIConfig({
     this.height = 48.0,
     this.buttonShape,
@@ -66,5 +68,6 @@ class NumberPaginatorUIConfig {
     this.contentPadding,
     this.buttonTextStyle,
     this.buttonPadding,
+    this.buttonSelectedBold = true,
   });
 }
